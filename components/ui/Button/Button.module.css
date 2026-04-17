@@ -1,0 +1,32 @@
+.root {
+  @apply bg-neon-cyan text-black cursor-pointer inline-flex px-10 rounded-sm leading-6 transition-all ease-in-out duration-300 font-bold text-center justify-center uppercase py-4 border border-neon-cyan items-center shadow-[0_0_10px_rgba(0,240,255,0.5)];
+}
+
+.root:hover {
+  @apply bg-transparent text-neon-cyan shadow-[0_0_25px_rgba(0,240,255,0.8)];
+}
+
+.root:focus {
+  @apply outline-none ring-2 ring-[#00f0ff] ring-opacity-80;
+}
+
+.root[data-active] {
+  @apply bg-[#00f0ff] scale-95;
+}
+
+.loading {
+  @apply bg-zinc-900 border-zinc-700 text-zinc-500 cursor-not-allowed shadow-none;
+}
+
+.slim {
+  @apply py-2 transform-none normal-case;
+}
+
+.disabled,
+.disabled:hover {
+  @apply text-zinc-400 border-zinc-600 bg-zinc-700 cursor-not-allowed;
+  filter: grayscale(1);
+  -webkit-transform: translateZ(0);
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
