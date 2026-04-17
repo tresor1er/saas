@@ -16,8 +16,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, mocked: true });
     }
 
-    const res = await loops.createContact(email, {
-      source: 'Website Newsletter',
+    const res = await loops.createContact({
+      email,
+      properties: {
+        source: 'Website Newsletter'
+      }
     });
 
     return NextResponse.json({ success: true, data: res });
